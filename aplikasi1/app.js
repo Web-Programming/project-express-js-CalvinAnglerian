@@ -16,3 +16,7 @@ server.listen(3000, () => {
 
 // node : buat menjalankan dalam codingann yang mau di buka
 // misal : node app.js
+// npm init : buat package
+// npm install express : install express
+
+// Pertemuan 2
