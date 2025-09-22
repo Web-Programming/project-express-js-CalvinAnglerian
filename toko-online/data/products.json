@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "name": "Laptop Gaming",
+    "price": 15000000,
+    "description": "Laptop berperforma tinggi untuk kebutuhan gaming anda"
+  },
+  {
+    "id": 2,
+    "name": "Smartphone 5G",
+    "price": 8000000,
+    "description": "Smartphone dengan dukungan jaringan 5G terbaru"
+  },
+  {
+    "id": 3,
+    "name": "Headphone Wireless",
+    "price": 1200000,
+    "description": "Headphone wireless dengan kualitas suara premium"
+  },
+  {
+    "id": 4,
+    "name": "Smartwatch",
+    "price": 2500000,
+    "description": "Jam tangan pintar dengan fitur kesehatan lengkap"
+  },
+  {
+    "id": 5,
+    "name": "Keyboard Mechanical",
+    "price": 900000,
+    "description": "Keyboard mechanical dengan switch tactile responsif"
+  },
+  {
+    "id": 6,
+    "name": "Mouse Gaming",
+    "price": 750000,
+    "description": "Mouse gaming dengan DPI tinggi dan RGB lighting"
+  },
+  {
+    "id": 7,
+    "name": "Monitor 4K",
+    "price": 5500000,
+    "description": "Monitor resolusi 4K dengan refresh rate tinggi"
+  },
+  {
+    "id": 8,
+    "name": "Tablet Stylus",
+    "price": 6000000,
+    "description": "Tablet dengan stylus untuk kebutuhan desain grafis"
+  },
+  {
+    "id": 9,
+    "name": "Speaker Bluetooth",
+    "price": 1500000,
+    "description": "Speaker portabel dengan suara jernih dan bass kuat"
+  },
+  {
+    "id": 10,
+    "name": "Camera DSLR",
+    "price": 12000000,
+    "description": "Kamera DSLR dengan sensor full-frame dan lensa kit"
+  },
+  {
+    "id": 11,
+    "name": "Drone Camera",
+    "price": 10000000,
+    "description": "Drone dengan kamera 4K dan fitur stabilisasi"
+  },
+  {
+    "id": 12,
+    "name": "Powerbank Fast Charge",
+    "price": 500000,
+    "description": "Powerbank dengan kapasitas besar dan fast charging"
+  },
+  {
+    "id": 13,
+    "name": "Printer Wireless",
+    "price": 2200000,
+    "description": "Printer multifungsi dengan koneksi wireless"
+  },
+  {
+    "id": 14,
+    "name": "SSD 1TB",
+    "price": 1800000,
+    "description": "Solid State Drive 1TB dengan kecepatan tinggi"
+  },
+  {
+    "id": 15,
+    "name": "External Harddisk 2TB",
+    "price": 1500000,
+    "description": "Harddisk eksternal kapasitas besar dan tahan guncangan"
+  },
+  {
+    "id": 16,
+    "name": "Casing PC Gaming",
+    "price": 1300000,
+    "description": "Casing PC dengan airflow bagus dan RGB"
+  },
+  {
+    "id": 17,
+    "name": "Webcam HD",
+    "price": 800000,
+    "description": "Webcam dengan resolusi 1080p untuk video conference"
+  },
+  {
+    "id": 18,
+    "name": "Microphone Condenser",
+    "price": 1700000,
+    "description": "Mic condenser untuk kebutuhan recording dan streaming"
+  },
+  {
+    "id": 19,
+    "name": "VR Headset",
+    "price": 7000000,
+    "description": "Headset VR untuk pengalaman gaming imersif"
+  },
+  {
+    "id": 20,
+    "name": "Projector Mini",
+    "price": 3000000,
+    "description": "Proyektor portabel dengan dukungan HDMI dan USB"
+  }
+]
