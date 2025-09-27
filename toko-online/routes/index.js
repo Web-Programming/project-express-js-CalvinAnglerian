@@ -8,8 +8,4 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Toko Online Sederhana', products: products });
 });
 
-// router.get('/search', function(req, res, next){
-//   res.query()
-// })
-
 module.exports = router;

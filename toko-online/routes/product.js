@@ -10,7 +10,7 @@ router.get('/:id', function(req, res, next) {
     if (!product) { // Jika produk tidak ditemukan
         return res.status(404).send('Produk tidak ditemukan!');
     }
-    res.render('product-detail', 
+    res.render('produk-detail', 
         {
             title : product.name,
             product : product
