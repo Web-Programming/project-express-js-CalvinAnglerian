@@ -1,5 +1,13 @@
 <% layout('layout') %>
 
+<!-- Modifikasi View -->
+<% if (searchQuery) { %>
+    <p>Hasil pencarian untuk "<%= searchQuery %>":</p>
+  <% if (products.length === 0) { %>
+    <p class="text-danger">Produk tidak ditemukan!</p>
+  <% } %>
+<% } %>
+
 <div class="container mt-5">
   <h1 class="text-center"><%= title %></h1>
   <div class="row">

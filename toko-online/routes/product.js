@@ -13,8 +13,9 @@ router.get('/:id', function(req, res, next) {
     res.render('produk-detail', 
         {
             title : product.name,
-            product : product
-        }
+            product : product,
+            searchQuery : '' // Supaya tidak error di layout
+        }       
     );
 });
 
