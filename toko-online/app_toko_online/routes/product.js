@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var products = require('../data/products.json');
+var products = require('../../data/products.json');
 
 /* GET product detail page. */
 router.get('/:id', function(req, res, next) {

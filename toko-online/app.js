@@ -4,8 +4,9 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+// Perbaikan ke 2
+var indexRouter = require('./app_toko_online/routes/index');
+var usersRouter = require('./app_toko_online/routes/users');
 
 var engine = require('ejs-blocks'); //menggunakan ejs block
 var app = express();
@@ -13,7 +14,7 @@ var app = express();
 var app = express();
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, 'app_toko_online', 'views')); // Perbaikan 1 
 app.engine('ejs', engine); // daftarkan engine ejs block
 app.set('view engine', 'ejs');
 
@@ -27,7 +28,7 @@ app.use('/bootstrap', express.static(path.join(__dirname,'node_modules/bootstrap
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-var productRouter= require("./routes/product"); // Daftarkan route product --> letakkan diatas agar rapi
+var productRouter= require("./app_toko_online/routes/product"); // Daftarkan route product --> letakkan diatas agar rapi
 app.use("/produk", productRouter);
 
 
