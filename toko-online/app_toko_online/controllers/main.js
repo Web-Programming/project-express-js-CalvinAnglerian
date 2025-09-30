@@ -23,6 +23,6 @@ res.render( 'index', {
     searchQuery: q
 });
 
-module.exports= { index };
+module.exports = { index };
 
 // Melakukan logika, model, dan lain lain di controller
