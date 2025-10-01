@@ -1,28 +1,41 @@
-var products = require('../../data/products.json');
+var products = require("../../data/products.json");
 
 const index = (req, res) => {
-    res.render('index', {
-      title: 'Toko Online Sederhana',
-      products: products,
-      searchQuery: ''
-    });
+  res.render("index", {
+    title: "Toko Online Sederhana",
+    products: products,
+    searchQuery: "",
+  });
 };
 
-const q = req.query.q ? req.query.q.toLowerCase():'';
+const search = (req, res) => {
+  const q = req.query.q ? req.query.q.toLowerCase() : "";
 
-let filteredProducts = products;
+  let filteredProducts = products;
 
-if (q) {
-    filteredProducts = products.filter( p=>p.name.toLocaleLowerCase().includes(q)
+  if (q) {
+    filteredProducts = products.filter((p) =>
+      p.name.toLocaleLowerCase().includes(q)
     );
-}
+  }
 
-res.render( 'index', {
-    title: 'Hasil Pencarian',
+  res.render("index", {
+    title: "Hasil Pencarian",
     products: filteredProducts,
-    searchQuery: q
-});
+    searchQuery: q,
+  });
+};
 
-module.exports = { index };
+// const Ulasan = (req, res) => {
+//   const productId = req.params.productId;
+//   const reviewId = req.params.reviewId;
+//   res.send("review-detail", {
+//     title: `Ulasan ${reviewId} untuk produk ${productId}`,
+//     productId: productId,
+//     reviewId: reviewId,
+//   });
+// };
+
+module.exports = { index, search };
 
 // Melakukan logika, model, dan lain lain di controller

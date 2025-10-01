@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-var mainController = require(".../controller/main");
+var mainControllers = require('../controllers/main');
 
 /* GET home page. */
 // router.get('/', function(req, res, next) {
@@ -11,7 +11,9 @@ var mainController = require(".../controller/main");
 //     searchQuery : ''
 //   });
 // });
-router.get("/", mainController.index);
+router.get('/', mainControllers.index);
+router.get('/search', mainControllers.search);  
+
 
 // Selesaikan fungsi route pencarian, pisahkan dengan controller
 
