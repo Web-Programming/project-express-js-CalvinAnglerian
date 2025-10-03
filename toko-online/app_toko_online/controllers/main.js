@@ -20,7 +20,7 @@ const search = (req, res) => {
   }
 
   res.render("index", {
-    title: "Hasil Pencarian",
+    title: "",
     products: filteredProducts,
     searchQuery: q,
   });
