@@ -7,7 +7,7 @@ const productDetail = (req, res) => {
   if (!product) {
     // Jika produk tidak ditemukan
     return res.status(404).send("Produk tidak ditemukan!");
-  }
+  } 
 
   res.render("produk-detail", 
     {
