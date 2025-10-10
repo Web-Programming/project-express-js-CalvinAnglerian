@@ -2,12 +2,16 @@ var express = require('express');
 var router = express.Router();
 
 var controllerProduct = require('../controllers/controllerProduct');
+const { route } = require('.');
 
 
 /* GET product detail page. */
 // router.get('/:id', function(req, res, next) {
 //   const productId = parseInt(req.params.id); // Tangkap id dari URL (Parameter)
 //   const product = products.find(p => p.id === productId); // Cari produk by id
+
+route.get("/apiall", controllerProduct.apiall);
+router.get("/all",controllerProduct.index); 
 
 router.get('/:id', controllerProduct.productDetail);
 
