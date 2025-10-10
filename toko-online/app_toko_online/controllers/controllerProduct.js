@@ -9,7 +9,8 @@ const index = async (req, res) => {
     const prod = await Product.find({}); //Untuk mengambil seluruh data dari collection
     res.render("index", {
       title: "Toko Online Sederhana - ini dari Mongo DB",
-      product: prod,
+      products: prod,
+      searchQuery: ""
     });
   } catch (err) {
     res.status(500).send("Gagal memuat produk");
@@ -21,18 +22,20 @@ const productDetail = async (req, res) => {
     // const productId = parseInt(req.params.id); // Tangkap id dari URL (Parameter)
     // const product = products.find((p) => p.id === productId); // Cari produk by id
 
-    const productId = parseInt(req.params.id);
+    const productId = (req.params.id);
     const product = await Product.findById(productId);
 
     if (!product) {
       // Jika produk tidak ditemukan
       return res.status(404).send("Produk tidak ditemukan!");
     }
-    res.render("produk-detail", {
-      title: product.name,
-      product: product,
-      searchQuery: " ",
-    });
+    res.render("produk-detail", 
+      {
+        title: product.name,
+        product: product,
+        searchQuery: ""
+      }
+    );
   } catch (err) {
     res.status(404).send("Gagal memuat detail produk");
   }
@@ -47,7 +50,7 @@ const apiall = async (req, res) => {
           status: true,
           message: "Data produk berhasil dimbil",
           data: prod
-        
+          
       });
   } catch (err) {
     res.status(500).json({
@@ -57,4 +60,4 @@ const apiall = async (req, res) => {
   }
 };
 
-module.exports = { index, productDetail };
+module.exports = { index, productDetail, apiall };

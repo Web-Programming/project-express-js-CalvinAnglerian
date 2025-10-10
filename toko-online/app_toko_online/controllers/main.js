@@ -26,15 +26,6 @@ const search = (req, res) => {
   });
 };
 
-// const Ulasan = (req, res) => {
-//   const productId = req.params.productId;
-//   const reviewId = req.params.reviewId;
-//   res.send("review-detail", {
-//     title: `Ulasan ${reviewId} untuk produk ${productId}`,
-//     productId: productId,
-//     reviewId: reviewId,
-//   });
-// };
 
 module.exports = { index, search };
 
