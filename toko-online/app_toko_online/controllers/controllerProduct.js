@@ -91,11 +91,10 @@ const create = async (req, res) => {
       res.status(500).json({
       status: false,
       message: 'Internal server error'
-    })
+    });
     }
-    
   }
-}
+};
 
 //read one /detail product
 const detailproduk = async (req, res) => {
@@ -105,11 +104,25 @@ const detailproduk = async (req, res) => {
     //cari berdasarkan id
     const product = await Product.findById(productId);
     //kirim respon error jika produk tdk ditemukan
+    if(!product) {
+      return res.status(404).json({
+        status: false,
+        message: "Produk tidak ditemukan"
+      });
+    }
     //kirim respon sukses
+    res.status(200).json({
+      status: true,
+      message: "Detail produk berhasil diambil",
+      data: product
+    });
   }catch (err){
-
+    res.status(500).json({
+      status: false,
+      message: "Gagal memuat detail produk"
+    });
   }
-}
+};
 
 //update data
 const update = async (req, res) => {
@@ -149,12 +162,37 @@ const update = async (req, res) => {
       });
     }
   }
-}
+};
 
 //delete/remove/destroy data
 const remove = async (req, res) => {
+  try{
+    // Hapus menggunakan method findByIdAndDelete
+    const product = await Product.findByIdAndDelete(req.params.id);
 
-}
+    if(!product) { // kirim respon gagal
+      res.status(404).json({
+        status:false, message: "Produk tidak ditemukan",
+      });
+    }else{
+      // Kirim respon sukses
+      res.status(200).json({
+        status: true, message: "Produk berhasil dihapus"
+      });
+    }
+
+  }catch(err){
+    if(err.name === 'CastError'){
+      res.status(400).json({
+        status: false, message: "Format ID tidak valid"
+      });
+    }else{
+      res.status(500).json({
+        status: false, message: 'Internal server error'
+      });
+    }
+  }
+};
 
 
 module.exports = { index, productDetail, all, create, detailproduk, update, remove };

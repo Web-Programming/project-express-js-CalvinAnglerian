@@ -8,8 +8,8 @@ var controllerProduct = require('../controllers/controllerProduct');
 //   const productId = parseInt(req.params.id); // Tangkap id dari URL (Parameter)
 //   const product = products.find(p => p.id === productId); // Cari produk by id
 
-router.get("/apiall", controllerProduct.apiall);
-router.get("/all",controllerProduct.index);
+router.get("/all", controllerProduct.all);
+router.get("/",controllerProduct.index);
 router.get('/:id', controllerProduct.productDetail);
 
 //     if (!product) { // Jika produk tidak ditemukan
