@@ -1,28 +1,43 @@
-### GET All Product
-GET http://localhost:3000/api/produk
+# ### GET All Product
+# GET http://localhost:3000/api/produk
 
-### Insert New Product
-POST http://localhost:3000/api/produk
+# ### Insert New Product
+# POST http://localhost:3000/api/produk
+# Content-Type: application/json
+
+# {
+#     "name" : "Mouse Gaming 2",
+#     "price" : "350000",
+#     "description" : "Hyper sensitive mouse",
+#     "stock" : 10
+# }
+
+# ### Detail Product
+# GET http://localhost:3000/api/produk/68f0e560ff92d392cab1129f
+
+# ### Update Product
+# PUT http://localhost:3000/api/produk/68f0e560ff92d392cab1129f
+# Content-Type: application/json
+
+# {
+#     "price": "600000",
+#     "stock": 5
+# }
+
+# ### Delete Product
+# DELETE http://localhost:3000/api/produk/68f0e560ff92d392cab1129f
+
+### GET all User
+GET http://localhost:3000/api/user
+
+### Insert new User
+POST http://localhost:3000/api/user
 Content-Type: application/json
 
 {
-    "name" : "Mouse Gaming 2",
-    "price" : "350000",
-    "description" : "Hyper sensitive mouse",
-    "stock" : 10
+    "username": "Calvin",
+    "email" : "calvinanglerian@gmail.com",
+    "password" : "23240098",
+    "address" : "Jalan Perum. Opi",
+    "isAdmin" : "false"
 }
-
-### Detail Product
-GET http://localhost:3000/api/produk/68f0e560ff92d392cab1129f
-
-### Update Product
-PUT http://localhost:3000/api/produk/68f0e560ff92d392cab1129f
-Content-Type: application/json
-
-{
-    "price": "600000",
-    "stock": 5
-}
-
-### Delete Product
-DELETE http://localhost:3000/api/produk/68f0e560ff92d392cab1129f

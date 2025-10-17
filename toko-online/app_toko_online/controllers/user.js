@@ -1,4 +1,4 @@
-var Users = require("../model/users");
+var Users = require("../models/users");
 
 const all = async (req, res) => {
     try {
@@ -31,13 +31,13 @@ const create = async (req, res) => {
         });
 
         //2. Simpan data ke mongodb melalui model Users
-        const product = await newUsers.save();
+        const users = await newUsers.save();
 
         //3. Kirim respon sukses ke user
         res.status(200).json({
             status: true,
             message: "User berhasil disimpan.",
-            data: usr
+            data: users
         });
     }catch(err){
         if(err.name === 'ValidationError'){
@@ -72,7 +72,7 @@ const detailuser = async (req, res) => {
         res.status(200).json({
             status: true,
             message: "Detail user berhasil diambil",
-            data: usr
+            data: users
         });
     }catch(err){
         res.status(500).json({
@@ -100,7 +100,7 @@ const update = async (req, res) => {
     res.status(200).json({
       status: true,
       message: "User berhasil diupdate",
-      data: usr
+      data: users
     });
   }catch(err){
     if(err.name === 'CastError'){

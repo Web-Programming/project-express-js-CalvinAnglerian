@@ -9,7 +9,7 @@ require("./app_toko_online/models/db");
 // Perbaikan ke 2
 var indexRouter = require('./app_toko_online/routes/index');
 var usersRouter = require('./app_toko_online/routes/users');
-var apiusersRouter = require('./app_toko_online/routes/users'); //
+var apiusersRouter = require('./app_toko_online/routes/api/user'); //
 
 var apiProductRouter = require("./app_toko_online/routes/api/product"); // Import route api
 var engine = require('ejs-blocks'); //menggunakan ejs block
