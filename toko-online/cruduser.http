@@ -1,0 +1,26 @@
+### GET all User
+GET http://localhost:3000/api/user
+
+### Insert new User
+POST http://localhost:3000/api/user
+Content-Type: application/json
+
+{
+    "username": "Calvin",
+    "email" : "calvinanglerian@gmail.com",
+    "password" : "23240098",
+    "address" : "Jalan Perum. Opi",
+    "isAdmin" : "false"
+}
+
+### Detail Users
+GET  http://localhost:3000/api/user/68f237c92f33d87df9eb7590
+
+### Update User
+PUT http://localhost:3000/api/user/68f237c92f33d87df9eb7590
+Content-Type: application/json
+
+{
+    "username": "Anglerian",
+    "password" : "Calvin283022"
+}
