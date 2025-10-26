@@ -1,13 +1,14 @@
 const mongoose = require("mongoose");
-const Product = require("./product");
 
 // Buat skema user
 const OrdersScema = new mongoose.Schema({
     user: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'User',
+        ref: 'User', // referensi ke model user
         required: true,
     },
+
+    // Item-item dalam pesanan (Relasi ke Model Product)
     orderItems: [
         {
             product: {
@@ -23,8 +24,8 @@ const OrdersScema = new mongoose.Schema({
             priceAtOrder: { // Harga produk saat order dibuat
                 type: Number,
                 required: true,
-            }
-        }
+            },
+        },
     ],
     totalAmount: {
         type: Number,
@@ -41,6 +42,5 @@ const OrdersScema = new mongoose.Schema({
     },
 });
 
-const Orders = mongoose.model('orders', OrdersScema);
-
-module.exports = Orders;
+const Order = mongoose.model('Order', OrdersScema);
+module.exports = Order;

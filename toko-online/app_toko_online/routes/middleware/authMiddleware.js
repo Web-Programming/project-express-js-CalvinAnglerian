@@ -1,4 +1,4 @@
-ecxports.adminOnly = (req, res, next) => {
+exports.adminOnly = (req, res, next) => {
     const isAdmin = req.body.isAdmin; // Contoh: { "isAdmin: true" }
     if (isAdmin === true) {
         console.log('Middleware: Akses Admin Diberikan.');
